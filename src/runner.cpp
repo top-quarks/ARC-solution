@@ -8,21 +8,13 @@ using namespace std;
 #include "visu.hpp"
 #include "read.hpp"
 #include "normalize.hpp"
-//#include "features.hpp"
-//#include "rankFeatures.hpp"
 #include "tasks.hpp"
 #include "evals.hpp"
-//#include "deduce_eval.hpp"
 
-//#include "brute.hpp"
 #include "brute2.hpp"
 
-#include "compose.hpp"
-//#include "rank.hpp"
 #include "score.hpp"
-#include "store.hpp"
 #include "load.hpp"
-//#include "ibrute.hpp"
 
 #include "deduce_op.hpp"
 #include "pieces.hpp"

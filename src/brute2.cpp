@@ -11,7 +11,6 @@ using namespace std;
 #include "visu.hpp"
 
 #include "brute2.hpp"
-#include "deduce_position.hpp"
 #include "pieces.hpp"
 
 #include "timer.hpp"

@@ -11,9 +11,8 @@ HEAD = utils.hpp read.hpp visu.hpp image_functions.hpp normalize.hpp core_functi
 HEAD_PATH = $(addprefix headers/,$(HEAD)) $(PREC).gch | obj
 
 
-OBJ = read.o core_functions.o image_functions.o image_functions2.o visu.o normalize.o tasks.o runner.o score.o load.o store.o evals.o brute2.o deduce_op.o deduce_position.o pieces.o compose2.o brute_size.o efficient.o
+OBJ = read.o core_functions.o image_functions.o image_functions2.o visu.o normalize.o tasks.o runner.o score.o load.o evals.o brute2.o deduce_op.o pieces.o compose2.o brute_size.o efficient.o
 
-#features.o brute.o rankFeatures.o rank.o spec.o ibrute.o deduce_eval.o compose.o greedy_compose.o
 OBJ_PATH = $(addprefix obj/,$(OBJ))
 
 obj:
@@ -26,7 +25,7 @@ obj/%.o: src/%.cpp $(HEAD_PATH)
 	g++ -c $< $(FLAGS) -o $@ -I headers
 all: $(OBJ)
 
-run: src/main.cpp $(OBJ_PATH) $(HEAD_PATH) headers/rankFeatures.hpp headers/tasks.hpp
+run: src/main.cpp $(OBJ_PATH) $(HEAD_PATH) headers/tasks.hpp
 	g++ src/main.cpp $(OBJ_PATH) $(FLAGS) $(LIBS) -o run -I headers
 
 count_tasks: src/count_tasks.cpp obj/read.o headers/utils.hpp
