@@ -1,0 +1,13 @@
+int symmetric(Image_ img, int id);
+int countFeat(Image_ img, int id);
+void addAlignCols(Image_ in, Image_ out, vector<double>&ret);
+void addNbrCols(Image_ out, vector<double>&ret);
+void calcColCounts(Image_ img, int*cnt);
+void addColCounts(Image_ in, Image_ out, vector<double>&ret);
+bool containsExact(Image_ big, Image_ small);
+void addContains(Image_ in, Image_ out, vector<double>&ret);
+void addEqualCol(Image_ in, Image_ out, vector<double>&ret);
+void addShapeImplications(Image_ img, vector<double>&ret);
+void inConstShapes(Image_ img, vector<double>&ret);
+vector<double> singleFeatures(Image_ in, Image_ out, Image_ given);
+vector<double> featureScores(vector<pair<Image,Image>>&train, Image_ test_in, vector<Image>&imgs);

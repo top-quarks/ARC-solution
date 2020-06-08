@@ -1,0 +1,207 @@
+0.941
+Training
+Correct: 127
+top-10:  149
+Wrong:   222
+Timeout: 29
+Evaluation
+Correct: 78
+top-10:  90
+Wrong:   242
+Timeout: 68
+
+0.941 without duplicates
+Training
+Correct: 135
+top-10:  148
+Wrong:   222
+Timeout: 30
+Evaluation
+Correct: 80
+top-10:  89
+Wrong:   242
+Timeout: 69
+
+
+
+Training
+Total:  400
+Pieces: 350
+Cands:  170
+Correct:103
+
+Evaluation
+Total:  400
+Pieces: 303
+Cands:  101
+Correct: 62
+
+
+2s
+Total:  400
+Pieces: 357
+Cands:  116
+Correct: 64
+
+
+Training 5-depth pieces
+Pieces: 279
+
+With compose and 5-depth pieces
+Total:  400
+Pieces: 192
+Cands:  109
+Correct: 85
+
+
+
+0.901 brute time 2s
+
+Evaluation
+Total:  419
+Pieces: 168
+Cands:  122
+Correct: 94
+
+
+
+
+depth 3
+
+2441.21user 6.29system 13:00.93elapsed 313%CPU (0avgtext+0avgdata 11621076maxresident)k
+Total:  100
+Pieces:  48
+Cands:   48
+Correct: 41
+
+
+
+
+Last 100 evaluation, depth 3
+3330030330330303300003003333303303033030020033333000000330033003302333300330000030320003300330230203
+
+Total:  100
+Pieces:  53
+Cands:   53
+Correct: 48
+3371.61user 29.39system 21:55.83elapsed 258%CPU (0avgtext+0avgdata 14790712maxresident)k
+10199512inputs+1400outputs (294750major+8070450minor)pagefaults 0swaps
+
+
+
+
+First 312 evaluation, depth 2, 10 tries in compose2
+003300003300020000033000000000000003003300000000002333300030003000300030030000030233000030000333000000032000303030332003300333330200003000300030030003033333003000003003003300000000003000030030030000032002000003003333002300030330023030003030300032000030300020002300003003000202300000302000000303000302300000000000
+
+Total:  312
+Pieces: 101
+Cands:  101
+Correct: 84
+626.97user 1.08system 1:23.67elapsed 750%CPU (0avgtext+0avgdata 1454348maxresident)k
+0inputs+2584outputs (0major+379336minor)pagefaults 0swaps
+
+
+
+First 312 evaluation, depth 2, 100 tries in compose2
+023300003300023000033000000200000003003322000000003333300030003000300030330000030233000030000333000000032000303020232003300333330300203000200330030003033333003000003003023300000000003000030030030002032002000003002333002300030330023030003030300032000232300020002300003002200302300000302000000302000302300002030000
+
+Total:  312
+Pieces: 116
+Cands:  116
+Correct: 85
+3110.27user 5.22system 8:02.45elapsed 645%CPU (0avgtext+0avgdata 1594036maxresident)k
+0inputs+2632outputs (0major+413247minor)pagefaults 0swaps
+
+
+Depth 2:
+319, 320, 321, 326, 327?, 329, 330, 332, 346, 347, 349, 350, 354, 355, 357, 360, 363, 364, 378, 379, 382, 387, 388, 389, 392, 401, 406, 410, 411, 416
+
+Depth 3:
+324, 334, 343?, 345!, 366!, 367!, 386, 393?, 414?
+
+Depth 4:
+344, 368,
+
+replaceTemplate:
+322, 341, 361, 362, 370, 373, 385, 390, 395, 407!, 415
+
+align:
+323, 331, 333, 337, 376
+
+Deep:
+325, 339, 340!, 351?, 352!, 353, 356?, 358, 365?, 369?, 371, 380, 383!, 399!, 408?
+
+Impossible:
+328, 336, 338, 339, 342, 348, 359, 372, 377, 381, 384, 391, 394, 396, 397, 400, 402, 405, 409, 412?, 413?, 417, 418!
+
+Binary:
+335, 374?, 475?, 398, 403, 404
+
+
+Mid: 2330030030330303300003003333303303033030020033333000000330033003303333200230000030300003300330230203
+Old: 3330030330330303300003003333303303033030020033333000000330033003302333300330000030320003300330230203
+New: 3330030030330303300003003333303303002030030033333000000330033000302333300330000030300003300332230203
+NNw: 3330030030330303300003003333303303032030030033333000000330033003303333300330000030300003300332330303
+TRA: 3330030030330303000003003333303300033030030033333000000300033000303333300330000030300003300333330303
+
+
+
+Depth 4 run:
+johan@Terminator:~/kaggle/absres/seventh_git$ make -j && /usr/bin/time ./run 368
+g++ -c src/runner.cpp -std=c++17 -g -O2  -o obj/runner.o -I headers
+g++ src/main.cpp obj/read.o obj/core_functions.o obj/image_functions.o obj/image_functions2.o obj/visu.o obj/normalize.o obj/tasks.o obj/runner.o obj/score.o obj/load.o obj/store.o obj/evals.o obj/brute2.o obj/deduce_op.o obj/deduce_position.o obj/pieces.o obj/compose2.o obj/brute_size.o -std=c++17 -g -O2  -lstdc++ -lstdc++fs -o run -I headers
+Running only task # 368
+Function count: 142
+Dag sizes: 5069474 7309613 8424086 8282888
+brutePieces time: 335.052
+Nodes:  29086151
+Pieces: 942688
+makePieces time: 284.332
+Memory: 7141.5 / 1102.6 / 2094.2 / 45.2 / 1861.5 MB
+Greedy fill time: 0
+Greedy fill time: 0
+Greedy fill time: 0.000126978
+Greedy fill time: 0.000353625
+Greedy fill time: 0.000516101
+Greedy fill time: 0.000667004
+Greedy fill time: 0.000827554
+Greedy fill time: 0.000990845
+Greedy fill time: 0.0011799
+composePieces time: 187.626
+Task #368 (2753e76c): Correct
+
+//This was after 58 minutes
+
+2768.50user 1307.78system 1:29:03elapsed 76%CPU (0avgtext+0avgdata 13968924maxresident)k
+61922800inputs+8outputs (7337901major+9899522minor)pagefaults 0swaps
+
+
+
+
+Without deduce_op
+With xy-swaps - 75 min
+With greedyFill(4) - 49 min
+Without normalizeCols - 50 min
+With task-dependent MAXAREA, etc.
+
+
+
+
+With rigid 7 + brute_size(base_train) - depth3
+As above rigid 6
+As top 1<<7 compose2
+As stop with depth 4 rigids
+
+
+Rigid 7
+With rigid 6 and cost 10
+With variable cost
+With unordered safe_run rigids
+Without greedyfill
+
+
+Rigid 6
+Rigid 7
+greedyFillBlack2
+Rigid 6+7
+Without given trains
