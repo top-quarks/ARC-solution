@@ -1,0 +1,2 @@
+Python 3 (3.6.9)
+g++ supporting c++17 (7.5.0)

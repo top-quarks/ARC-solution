@@ -1,0 +1,7 @@
+.
+./output
+./store
+./store/tmp
+./src
+./obj
+./headers
