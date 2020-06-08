@@ -17,6 +17,7 @@ OBJ_PATH = $(addprefix obj/,$(OBJ))
 
 obj:
 	mkdir -p obj
+	mkdir -p output
 
 $(PREC).gch: $(PREC)
 	g++ -c $< $(FLAGS)

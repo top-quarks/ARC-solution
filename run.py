@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 run_list = range(0,419)
+run_depth = 2
 
 from subprocess import call
 from concurrent.futures import ThreadPoolExecutor as Pool
@@ -13,6 +14,9 @@ if len(sys.argv) == 2: version = sys.argv[1]
 print("Updating to version", version)
 
 parallel = 6
+
+os.system('mkdir -p store/version/')
+os.system('mkdir -p store/tmp/')
 
 def outdated(i):
     fn = 'store/version/%d.txt'%i
@@ -35,7 +39,7 @@ done = 0
 
 n = len(run_list)
 def run(i):
-    if call(['/usr/bin/time', './run', str(i), '32'], stdout=open('store/tmp/%d_out.txt'%i,'w'), stderr=open('store/tmp/%d_err.txt'%i,'w')):
+    if call(['/usr/bin/time', './run', str(i), str(run_depth)], stdout=open('store/tmp/%d_out.txt'%i,'w'), stderr=open('store/tmp/%d_err.txt'%i,'w')):
         print(i, "Crashed")
         return i
     os.system('cp store/tmp/%d_out.txt store/%d_out.txt'%(i,i))
