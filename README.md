@@ -1,7 +1,4 @@
-Hello!
-
 Below you can find a outline of how to run my solution to Kaggle's Abstraction and Reasoning Challenge.
-If you run into any trouble with the setup/code or have any questions you can contact me at top-quarks@protonmail.com
 
 ## Tested computer setup
  - Ubuntu 18.04.4 LTS
@@ -35,3 +32,14 @@ To run the full model and produce precictions on the test set (takes 9 hours), c
 ```python3 safe_run.py```
 
 This produces the output file named "submission_part.csv", which can be renamed to "submission.csv" to submit to the competition.
+
+## Citation
+If you find this repository helpful, please cite:
+```bib
+@software{wind2020dsl,
+  title  = {DSL solution to the ARC challenge},
+  author = {Wind, Johan S.},
+  url    = {https://github.com/top-quarks/ARC-solution},
+  year   = {2020}
+}
+```
